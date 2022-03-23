@@ -81,17 +81,11 @@ module "sql_failover" {
 ```
 
 ### Contributors
-|  [![Reena Nain][Reena_avatar]][Reena_homepage]<br/>[Reena Nain][Reena_homepage] |
-|---|
+|  [![Reena Nain][Reena_avatar]][Reena_homepage]<br/>[Reena Nain][Reena_homepage] | [![Anubhav Rana][Anubhav_avatar]][Anubhav_homepage]<br/>[Anubhav Rana][Anubhav_homepage] |
+|---|---|
 
 
-  [reena_homepage]: https://github.com/reena.nai 
+  [reena_homepage]: https://www.linkedin.com/in/reena-nain-616b97213  
   [reena_avatar]: https://gitlab.com/uploads/-/system/user/avatar/9292330/avatar.png?width=400
-
-
-
-
-
-
-
-
+  [anubhav_homepage]: https://gitlab.com/anubhavrana008
+  [anubhav_avatar]: https://gitlab.com/uploads/-/system/user/avatar/10197169/avatar.png?width=400

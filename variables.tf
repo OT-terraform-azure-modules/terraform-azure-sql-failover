@@ -26,10 +26,11 @@ variable "secondary_server_id" {
 variable "failover_policy_mode" {
   type        = string
   description = "(Required) Mode of R/W endpoint failover policy"
+  default     = "Automatic"
 }
 
 variable "failover_policy_grace_minutes" {
   type        = string
   description = "(Required) Grace minutes of R/W endpoint failover policy"
+  default = "60"
 }
-

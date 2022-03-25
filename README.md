@@ -39,8 +39,8 @@ Inputs
 | failover_group_name | Name of our SQL DB failover group | `string` | | yes |
 | sql_failover_db_id | ID(s) of Failover SQL DB. This we will get from another module | `list(string)` | | yes |
 | secondary_server_id | ID of Secondary sql server. This we will get from another module | `string` | | yes |
-| failover_policy_mode | Mode of R/W endpoint failover policy | `string` | Automatic | yes |
-| failover_policy_grace_minutes | Grace minutes of R/W endpoint failover policy | `string` | 60 | yes |
+| failover_policy_mode | Mode of R/W endpoint failover policy | `string` | Automatic | no |
+| failover_policy_grace_minutes | Grace minutes of R/W endpoint failover policy | `string` | 60 | no |
 
 
 Output
@@ -68,7 +68,7 @@ Usage
 -----
 ```hcl
 module "sql_failover" {
-  source                        = "Location of your files"
+  source                        = "Location of your Module"
   failover_group_name           = ""
   resource_group_name           = module.res_group.resource_group_name
   primary_server_name           = module.mysql_firewall.sql_server_name[0]

@@ -15,6 +15,7 @@ provider "azurerm" {
 
 module "res_group" {
   source                  = "OT-terraform-azure-modules/resource-group/azure"
+  version                 = "0.0.2"
   resource_group_name     = "azure_rg"
   resource_group_location = "Eastus"
   lock_level_value        = ""
@@ -24,14 +25,15 @@ module "res_group" {
 }
 
 module "mysql_firewall" {
-  source                = "git::https://github.com/OT-terraform-azure-modules/terraform-azure-sql-db.git"
+  source                = "OT-terraform-azure-modules/sql-db/azure"
+  version               = "0.0.2"
   resource_group_name   = module.res_group.resource_group_name
   sql_database_required = "true"
   regions               = ["East US", "West US"]
 }
 
 module "sql_failover" {
-  source                        = "git::https://github.com/OT-terraform-azure-modules/terraform-azure-sql-failover.git?ref=main"
+  source                        = "../"
   failover_group_name           = "testfailovergroup"
   resource_group_name           = module.res_group.resource_group_name
   primary_server_name           = module.mysql_firewall.sql_server_name[0]
